@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: yaml-webapp-service
+spec:
+  selector:
+    app: yaml-webapp   # matches pod label
+  ports:
+    - protocol: TCP
+      port: 3000       # Service port
+      targetPort: 3000 # Pod's containerPort
+      nodePort: 30080  # optional fixed NodePort
+  type: NodePort

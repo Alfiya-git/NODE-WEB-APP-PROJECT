@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: yaml-webapp-pod
+  labels:
+    app: yaml-webapp
+    type: front-end
+spec:
+  containers:
+    - name: yaml-webapp-cont
+      image: alfiyazabir05/webapp_image:latest
+      ports:
+        - containerPort: 3000
